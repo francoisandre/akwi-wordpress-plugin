@@ -1,0 +1,15 @@
+<project name="theme-build" default="copie" basedir=".">
+
+	<property name="wordpress" location="C:/wamp64/www/wordpress"/>
+	<property name="plugin" location="${wordpress}/wp-content/plugins/akwi-wordpress-plugin"/>
+
+	<target name="copie">
+		<echo message="Debut copie"/>
+		<mkdir dir="${plugin}"/>
+		<copy todir="${plugin}">
+			<fileset dir="."/>
+		</copy>
+		<echo message="Fin copie"/>
+	</target>
+
+</project>
